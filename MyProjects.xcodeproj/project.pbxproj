@@ -16,6 +16,8 @@
 		CF2134E8255596FF00C5048A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2134E7255596FF00C5048A /* CloudKit.framework */; };
 		CF2134EA2555DF8400C5048A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134E92555DF8400C5048A /* HomeView.swift */; };
 		CF2134EE2555DFFD00C5048A /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134ED2555DFFD00C5048A /* ProjectView.swift */; };
+		CF21351A25585CAE00C5048A /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */; };
+		CF21351E25585E6100C5048A /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		CF2134E7255596FF00C5048A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CF2134E92555DF8400C5048A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CF2134ED2555DFFD00C5048A /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				CF2134D325558BE200C5048A /* Preview Content */,
 				CF2134DD25558C0F00C5048A /* Main.xcdatamodeld */,
 				CF2134E125558ECA00C5048A /* DataController.swift */,
+				CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */,
+				CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */,
 			);
 			path = MyProjects;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			files = (
 				CF2134EE2555DFFD00C5048A /* ProjectView.swift in Sources */,
 				CF2134DF25558C0F00C5048A /* Main.xcdatamodeld in Sources */,
+				CF21351E25585E6100C5048A /* Project-CoreDataHelpers.swift in Sources */,
 				CF2134E225558ECA00C5048A /* DataController.swift in Sources */,
 				CF2134D025558BE000C5048A /* ContentView.swift in Sources */,
+				CF21351A25585CAE00C5048A /* Item-CoreDataHelpers.swift in Sources */,
 				CF2134EA2555DF8400C5048A /* HomeView.swift in Sources */,
 				CF2134CE25558BE000C5048A /* MyProjectsApp.swift in Sources */,
 			);
