@@ -32,6 +32,7 @@ extension Item {
         item.priority = 3
         item.creationDate = Date()
         
+        try? viewContext.save()
         return item
     }
 }

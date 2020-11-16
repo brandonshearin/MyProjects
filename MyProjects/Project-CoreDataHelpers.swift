@@ -9,6 +9,8 @@ import Foundation
 
 extension Project {
     
+    static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
+    
     var projectTitle: String {
         title ?? "New Project"
     }
@@ -67,6 +69,8 @@ extension Project {
         project.detail = "this is an example project"
         project.closed = true
         project.creationDate = Date()
+        
+        try? viewContext.save()
         
         return project
     }
