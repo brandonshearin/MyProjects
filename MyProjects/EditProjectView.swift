@@ -11,8 +11,8 @@ struct EditProjectView: View {
     
     let project: Project
     
-    @EnvironmentObject var dataController: DataController
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var dataController: DataController
     
     @State private var showingDeleteConfirm: Bool = false
     @State private var color: String

@@ -10,8 +10,12 @@ import Foundation
 
 extension Item {
     
+    enum SortOrder {
+        case optimized, title, creationDate
+    }
+    
     var itemTitle: String {
-        title ?? ""
+        title ?? NSLocalizedString("New Item", comment: "Create a new item")
     }
     
     var itemDetail: String {

@@ -21,18 +21,25 @@ struct ContentView: View {
                     Text("Home")
                 }
             
-            ProjectView(showClosedProjects: false)
-                .tag(ProjectView.openTag)
+            ProjectsView(showClosedProjects: false)
+                .tag(ProjectsView.openTag)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Open")
                 }
             
-            ProjectView(showClosedProjects: true)
-                .tag(ProjectView.closedTag)
+            ProjectsView(showClosedProjects: true)
+                .tag(ProjectsView.closedTag)
                 .tabItem {
                     Image(systemName: "checkmark")
                     Text("Closed")
+                }
+            
+            AwardsView()
+                .tag(AwardsView.tag)
+                .tabItem {
+                    Image(systemName: "rosette")
+                    Text("Awards")
                 }
         }
     }
