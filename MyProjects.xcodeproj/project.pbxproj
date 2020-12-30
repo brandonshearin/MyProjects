@@ -15,12 +15,21 @@
 		CF2134E225558ECA00C5048A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134E125558ECA00C5048A /* DataController.swift */; };
 		CF2134E8255596FF00C5048A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2134E7255596FF00C5048A /* CloudKit.framework */; };
 		CF2134EA2555DF8400C5048A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134E92555DF8400C5048A /* HomeView.swift */; };
-		CF2134EE2555DFFD00C5048A /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134ED2555DFFD00C5048A /* ProjectView.swift */; };
+		CF2134EE2555DFFD00C5048A /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2134ED2555DFFD00C5048A /* ProjectsView.swift */; };
 		CF21351A25585CAE00C5048A /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */; };
 		CF21351E25585E6100C5048A /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */; };
+		CF27FF26257D7B6D008B8B5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF27FF25257D7B6D008B8B5F /* Localizable.strings */; };
+		CF510A8B257BD8D5000D7E94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF510A8A257BD8D5000D7E94 /* Color-Additions.swift */; };
+		CF5CD670259CEE670028411E /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CD66F259CEE670028411E /* ItemListView.swift */; };
+		CF5CD673259CEF040028411E /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CD672259CEF040028411E /* ProjectSummaryView.swift */; };
+		CF68F579256B09B300AF8694 /* SelectSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68F578256B09B300AF8694 /* SelectSomething.swift */; };
 		CF95D4272561F98800AE50F8 /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95D4262561F98800AE50F8 /* ProjectHeaderView.swift */; };
 		CF95D42B2561FBCA00AE50F8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF95D42A2561FBCA00AE50F8 /* Colors.xcassets */; };
 		CF95D42F2561FE0400AE50F8 /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95D42E2561FE0400AE50F8 /* EditProjectView.swift */; };
+		CFEFF48A256D948100E6B364 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFF489256D948100E6B364 /* Bundle-Decodable.swift */; };
+		CFEFF48D256D99F600E6B364 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = CFEFF48C256D99F600E6B364 /* Awards.json */; };
+		CFEFF490256D9A9E00E6B364 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFF48F256D9A9E00E6B364 /* Award.swift */; };
+		CFEFF493256D9B3D00E6B364 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEFF492256D9B3D00E6B364 /* AwardsView.swift */; };
 		CFF8D0852558F216008F4F1C /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D0842558F216008F4F1C /* EditItemView.swift */; };
 		CFF8D0882558F585008F4F1C /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D0872558F585008F4F1C /* ItemRowView.swift */; };
 		CFF8D08B2558F7F2008F4F1C /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF8D08A2558F7F2008F4F1C /* Binding-OnChange.swift */; };
@@ -38,12 +47,21 @@
 		CF2134E4255596D600C5048A /* MyProjects.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyProjects.entitlements; sourceTree = "<group>"; };
 		CF2134E7255596FF00C5048A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CF2134E92555DF8400C5048A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CF2134ED2555DFFD00C5048A /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		CF2134ED2555DFFD00C5048A /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		CF27FF25257D7B6D008B8B5F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CF510A8A257BD8D5000D7E94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
+		CF5CD66F259CEE670028411E /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		CF5CD672259CEF040028411E /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
+		CF68F578256B09B300AF8694 /* SelectSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomething.swift; sourceTree = "<group>"; };
 		CF95D4262561F98800AE50F8 /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		CF95D42A2561FBCA00AE50F8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CF95D42E2561FE0400AE50F8 /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		CFEFF489256D948100E6B364 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		CFEFF48C256D99F600E6B364 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		CFEFF48F256D9A9E00E6B364 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		CFEFF492256D9B3D00E6B364 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		CFF8D0842558F216008F4F1C /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		CFF8D0872558F585008F4F1C /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		CFF8D08A2558F7F2008F4F1C /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
@@ -87,18 +105,27 @@
 				CFF8D0842558F216008F4F1C /* EditItemView.swift */,
 				CF95D42E2561FE0400AE50F8 /* EditProjectView.swift */,
 				CFF8D08A2558F7F2008F4F1C /* Binding-OnChange.swift */,
+				CF5CD672259CEF040028411E /* ProjectSummaryView.swift */,
 				CF2134E92555DF8400C5048A /* HomeView.swift */,
-				CF2134ED2555DFFD00C5048A /* ProjectView.swift */,
+				CF5CD66F259CEE670028411E /* ItemListView.swift */,
+				CF27FF25257D7B6D008B8B5F /* Localizable.strings */,
+				CF510A8A257BD8D5000D7E94 /* Color-Additions.swift */,
+				CF2134ED2555DFFD00C5048A /* ProjectsView.swift */,
+				CF68F578256B09B300AF8694 /* SelectSomething.swift */,
 				CFF8D0872558F585008F4F1C /* ItemRowView.swift */,
 				CF95D4262561F98800AE50F8 /* ProjectHeaderView.swift */,
 				CF2134D125558BE200C5048A /* Assets.xcassets */,
 				CF95D42A2561FBCA00AE50F8 /* Colors.xcassets */,
+				CFEFF48C256D99F600E6B364 /* Awards.json */,
+				CFEFF48F256D9A9E00E6B364 /* Award.swift */,
+				CFEFF492256D9B3D00E6B364 /* AwardsView.swift */,
 				CF2134D625558BE200C5048A /* Info.plist */,
 				CF2134D325558BE200C5048A /* Preview Content */,
 				CF2134DD25558C0F00C5048A /* Main.xcdatamodeld */,
 				CF2134E125558ECA00C5048A /* DataController.swift */,
 				CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */,
 				CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */,
+				CFEFF489256D948100E6B364 /* Bundle-Decodable.swift */,
 			);
 			path = MyProjects;
 			sourceTree = "<group>";
@@ -176,7 +203,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF27FF26257D7B6D008B8B5F /* Localizable.strings in Resources */,
 				CF95D42B2561FBCA00AE50F8 /* Colors.xcassets in Resources */,
+				CFEFF48D256D99F600E6B364 /* Awards.json in Resources */,
 				CF2134D525558BE200C5048A /* Preview Assets.xcassets in Resources */,
 				CF2134D225558BE200C5048A /* Assets.xcassets in Resources */,
 			);
@@ -189,12 +218,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2134EE2555DFFD00C5048A /* ProjectView.swift in Sources */,
+				CF2134EE2555DFFD00C5048A /* ProjectsView.swift in Sources */,
+				CF510A8B257BD8D5000D7E94 /* Color-Additions.swift in Sources */,
 				CF95D4272561F98800AE50F8 /* ProjectHeaderView.swift in Sources */,
+				CFEFF48A256D948100E6B364 /* Bundle-Decodable.swift in Sources */,
 				CF2134DF25558C0F00C5048A /* Main.xcdatamodeld in Sources */,
+				CF5CD670259CEE670028411E /* ItemListView.swift in Sources */,
 				CF21351E25585E6100C5048A /* Project-CoreDataHelpers.swift in Sources */,
+				CFEFF490256D9A9E00E6B364 /* Award.swift in Sources */,
+				CFEFF493256D9B3D00E6B364 /* AwardsView.swift in Sources */,
 				CF95D42F2561FE0400AE50F8 /* EditProjectView.swift in Sources */,
 				CF2134E225558ECA00C5048A /* DataController.swift in Sources */,
+				CF5CD673259CEF040028411E /* ProjectSummaryView.swift in Sources */,
+				CF68F579256B09B300AF8694 /* SelectSomething.swift in Sources */,
 				CFF8D0882558F585008F4F1C /* ItemRowView.swift in Sources */,
 				CF2134D025558BE000C5048A /* ContentView.swift in Sources */,
 				CFF8D08B2558F7F2008F4F1C /* Binding-OnChange.swift in Sources */,

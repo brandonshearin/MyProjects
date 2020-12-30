@@ -42,6 +42,24 @@ struct EditProjectView: View {
         presentationMode.wrappedValue.dismiss()
     }
     
+    func colorButton(for item: String) -> some View {
+        ZStack {
+            Color(item)
+                .aspectRatio(1, contentMode: .fit)
+                .cornerRadius(6)
+            
+            if item == color {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+            }
+        }
+        .onTapGesture {
+            color = item
+            update()
+        }
+    }
+    
     var body: some View {
         Form {
             // Section 1
@@ -53,21 +71,7 @@ struct EditProjectView: View {
             Section(header: Text("Custom project color")){
                 LazyVGrid(columns: colorColumns) {
                     ForEach(Project.colors, id: \.self) { item in
-                        ZStack {
-                            Color(item)
-                                .aspectRatio(1, contentMode: .fit)
-                                .cornerRadius(6)
-                            
-                            if item == color {
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundColor(.white)
-                                    .font(.largeTitle)
-                            }
-                        }
-                        .onTapGesture {
-                            color = item
-                            update()
-                        }
+                        colorButton(for: item)
                     }
                 }
                 .padding(.vertical)

@@ -29,72 +29,66 @@ struct ProjectsView: View {
         projects = FetchRequest<Project>(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)], predicate: NSPredicate(format: "closed = %d", showClosedProjects))
     }
     
+    var projectsList: some View {
+        List {
+            ForEach(projects.wrappedValue){project in
+                Section(header: ProjectHeaderView(project: project)) {
+                    ForEach(project.projectItems(using: sortOrder)){ item in
+                        ItemRowView(project: project, item: item)
+                    }
+                    .onDelete{ offsets in
+                        delete(offsets, from: project)
+                    }
+                    
+                    if showClosedProjects == false {
+                        Button {
+                            addItem(to: project)
+                        } label: {
+                            Label("Add new item", systemImage: "plus")
+                        }
+                    }
+                }
+            }
+        }
+        .listStyle(InsetGroupedListStyle())
+    }
+    
+    var addProjectToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing){
+            if showClosedProjects == false {
+                Button {
+                    addProject()
+                } label : {
+                    Label("Add Project", systemImage: "plus")
+                }
+            }
+        }
+    }
+    
+    var sortOrderToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading){
+            Button {
+                showingSortOrder.toggle()
+            } label: {
+                Label("Sort", systemImage: "arrow.up.arrow.down")
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             Group {
                 if projects.wrappedValue.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
-                }else {
-                    List {
-                        ForEach(projects.wrappedValue){project in
-                            Section(header: ProjectHeaderView(project: project)) {
-                                ForEach(project.projectItems(using: sortOrder)){ item in
-                                    ItemRowView(project: project, item: item)
-                                }
-                                .onDelete{ offsets in
-                                    
-                                    let allItems = project.projectItems(using: sortOrder)
-                                    
-                                    for offset in offsets {
-                                        let item = allItems[offset]
-                                        dataController.delete(item)
-                                    }
-                                    
-                                    dataController.save()
-                                }
-                                
-                                if showClosedProjects == false {
-                                    Button {
-                                        withAnimation {
-                                            let item = Item(context: managedObjectContext)
-                                            item.project = project
-                                            item.creationDate = Date()
-                                            dataController.save()
-                                        }
-                                    } label: {
-                                        Label("Add new item", systemImage: "plus")
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .listStyle(InsetGroupedListStyle())
+                } else {
+                    projectsList
                 }
             }
             .navigationBarTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing){
-                    if showClosedProjects == false {
-                        Button {
-                            withAnimation {
-                                let project = Project(context: managedObjectContext)
-                                project.closed = false
-                                project.creationDate = Date()
-                                dataController.save()
-                            }
-                        } label : {
-                            Label("Add Project", systemImage: "plus")
-                        }
-                    }
-                }
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button {
-                        showingSortOrder.toggle()
-                    } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
-                    }
-                }
+                addProjectToolbarItem
+                sortOrderToolbarItem
             }
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort items"), message: nil, buttons: [
@@ -108,7 +102,33 @@ struct ProjectsView: View {
         }
     }
     
+    func addProject() {
+        withAnimation {
+            let project = Project(context: managedObjectContext)
+            project.closed = false
+            project.creationDate = Date()
+            dataController.save()
+        }
+    }
+    func addItem(to project: Project){
+        withAnimation {
+            let item = Item(context: managedObjectContext)
+            item.project = project
+            item.creationDate = Date()
+            dataController.save()
+        }
+    }
     
+    func delete(_ offsets: IndexSet, from project: Project){
+        let allItems = project.projectItems(using: sortOrder)
+        
+        for offset in offsets {
+            let item = allItems[offset]
+            dataController.delete(item)
+        }
+        
+        dataController.save()
+    }
 }
 
 struct ProjectView_Previews: PreviewProvider {
