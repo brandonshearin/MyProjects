@@ -15,7 +15,11 @@ struct HomeView: View {
     @EnvironmentObject var dataController: DataController
     
     // this property wrapper will match ALL entities that you ask for (in this case Projects), in the sort order and filtered by the predicate you've given
-    @FetchRequest(entity: Project.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)], predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
+    @FetchRequest(
+        entity: Project.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
+        predicate: NSPredicate(format: "closed = false"))
+    var projects: FetchedResults<Project>
     
     let items: FetchRequest<Item>
     
@@ -27,7 +31,7 @@ struct HomeView: View {
         let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate,openPredicate])
         
         request.predicate = compoundPredicate
-            
+        
         request.sortDescriptors = [
             NSSortDescriptor(keyPath: \Item.priority, ascending: false)
         ]
@@ -69,6 +73,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-            HomeView()
+        HomeView()
     }
 }
