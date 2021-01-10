@@ -99,33 +99,16 @@
 		CF2134CC25558BE000C5048A /* MyProjects */ = {
 			isa = PBXGroup;
 			children = (
-				CF2134E4255596D600C5048A /* MyProjects.entitlements */,
+				CFA1526725AB533900E4440A /* Controller */,
+				CFA1526325AB524A00E4440A /* Activities */,
+				CFA1526225AB511200E4440A /* Extensions */,
+				CFA1525D25AB50AC00E4440A /* Configuration */,
 				CF2134CD25558BE000C5048A /* MyProjectsApp.swift */,
 				CF2134CF25558BE000C5048A /* ContentView.swift */,
-				CFF8D0842558F216008F4F1C /* EditItemView.swift */,
-				CF95D42E2561FE0400AE50F8 /* EditProjectView.swift */,
-				CFF8D08A2558F7F2008F4F1C /* Binding-OnChange.swift */,
-				CF5CD672259CEF040028411E /* ProjectSummaryView.swift */,
-				CF2134E92555DF8400C5048A /* HomeView.swift */,
-				CF5CD66F259CEE670028411E /* ItemListView.swift */,
 				CF27FF25257D7B6D008B8B5F /* Localizable.strings */,
-				CF510A8A257BD8D5000D7E94 /* Color-Additions.swift */,
-				CF2134ED2555DFFD00C5048A /* ProjectsView.swift */,
-				CF68F578256B09B300AF8694 /* SelectSomething.swift */,
-				CFF8D0872558F585008F4F1C /* ItemRowView.swift */,
-				CF95D4262561F98800AE50F8 /* ProjectHeaderView.swift */,
 				CF2134D125558BE200C5048A /* Assets.xcassets */,
 				CF95D42A2561FBCA00AE50F8 /* Colors.xcassets */,
-				CFEFF48C256D99F600E6B364 /* Awards.json */,
-				CFEFF48F256D9A9E00E6B364 /* Award.swift */,
-				CFEFF492256D9B3D00E6B364 /* AwardsView.swift */,
-				CF2134D625558BE200C5048A /* Info.plist */,
 				CF2134D325558BE200C5048A /* Preview Content */,
-				CF2134DD25558C0F00C5048A /* Main.xcdatamodeld */,
-				CF2134E125558ECA00C5048A /* DataController.swift */,
-				CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */,
-				CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */,
-				CFEFF489256D948100E6B364 /* Bundle-Decodable.swift */,
 			);
 			path = MyProjects;
 			sourceTree = "<group>";
@@ -144,6 +127,79 @@
 				CF2134E7255596FF00C5048A /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFA1525D25AB50AC00E4440A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CF2134DD25558C0F00C5048A /* Main.xcdatamodeld */,
+				CF2134D625558BE200C5048A /* Info.plist */,
+				CF2134E4255596D600C5048A /* MyProjects.entitlements */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CFA1526225AB511200E4440A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF21351925585CAE00C5048A /* Item-CoreDataHelpers.swift */,
+				CF21351D25585E6100C5048A /* Project-CoreDataHelpers.swift */,
+				CFEFF489256D948100E6B364 /* Bundle-Decodable.swift */,
+				CF510A8A257BD8D5000D7E94 /* Color-Additions.swift */,
+				CFF8D08A2558F7F2008F4F1C /* Binding-OnChange.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFA1526325AB524A00E4440A /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				CFA1526625AB525F00E4440A /* Awards */,
+				CFA1526525AB525900E4440A /* Projects */,
+				CFA1526425AB525200E4440A /* Home */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		CFA1526425AB525200E4440A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF5CD66F259CEE670028411E /* ItemListView.swift */,
+				CF2134E92555DF8400C5048A /* HomeView.swift */,
+				CF5CD672259CEF040028411E /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CFA1526525AB525900E4440A /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				CFF8D0842558F216008F4F1C /* EditItemView.swift */,
+				CF95D42E2561FE0400AE50F8 /* EditProjectView.swift */,
+				CF2134ED2555DFFD00C5048A /* ProjectsView.swift */,
+				CF68F578256B09B300AF8694 /* SelectSomething.swift */,
+				CFF8D0872558F585008F4F1C /* ItemRowView.swift */,
+				CF95D4262561F98800AE50F8 /* ProjectHeaderView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		CFA1526625AB525F00E4440A /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				CFEFF492256D9B3D00E6B364 /* AwardsView.swift */,
+				CFEFF48F256D9A9E00E6B364 /* Award.swift */,
+				CFEFF48C256D99F600E6B364 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		CFA1526725AB533900E4440A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF2134E125558ECA00C5048A /* DataController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,12 +421,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyProjects/MyProjects.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyProjects/Configuration/MyProjects.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyProjects/Preview Content\"";
 				DEVELOPMENT_TEAM = W2RD3Q63EX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MyProjects/Info.plist;
+				INFOPLIST_FILE = MyProjects/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,12 +444,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyProjects/MyProjects.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyProjects/Configuration/MyProjects.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyProjects/Preview Content\"";
 				DEVELOPMENT_TEAM = W2RD3Q63EX;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MyProjects/Info.plist;
+				INFOPLIST_FILE = MyProjects/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
